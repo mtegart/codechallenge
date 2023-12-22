@@ -40,12 +40,6 @@ const findFrequency = function(array) {
   return frequencyMap;
 };
 
-// Example usage:
-const elements = [1, 2, 3, 1, 2, 4, 1, 5];
-const frequencyResult = findFrequency(elements);
-console.log(frequencyResult);
-// Output: { '1': 3, '2': 2, '3': 1, '4': 1, '5': 1 }
-
 const isPalindrome = function(str) {
   // Check if the input is a string
   if (typeof str !== 'string') {
@@ -58,13 +52,6 @@ const isPalindrome = function(str) {
   // Check if the cleaned string is equal to its reverse
   return cleanedStr === cleanedStr.split('').reverse().join('');
 };
-
-// Example usage:
-const exampleString1 = 'A man, a plan, a canal, Panama';
-const exampleString2 = 'hello';
-
-console.log(isPalindrome(exampleString1)); // Output: true
-console.log(isPalindrome(exampleString2)); // Output: false
 
 const largestPair = function(array) {
   // Check if the input is an array with at least two elements
@@ -91,10 +78,6 @@ const largestPair = function(array) {
   return largestSum;
 };
 
-// Example usage:
-const numbers = [1, 2, 3, 4, 5, 6];
-console.log(largestPair(numbers)); // Output: 11 (largest pair is [5, 6])
-
 const removeParenth = function(str) {
   // Check if the input is a string
   if (typeof str !== 'string') {
@@ -106,11 +89,6 @@ const removeParenth = function(str) {
 
   return result;
 };
-
-// Example usage:
-const stringWithParentheses = 'This is (an example) string with (parentheses).';
-console.log(removeParenth(stringWithParentheses));
-// Output: 'This is an example string with parentheses.'
 
 const scoreScrabble = function(str) {
   // Check if the input is a string
@@ -136,8 +114,3 @@ const scoreScrabble = function(str) {
 
   return score;
 };
-
-// Example usage:
-const word = 'Scrabble';
-console.log(scoreScrabble(word)); // Output: 14 (S: 1 + c: 3 + r: 1 + a: 1 + b: 3 + b: 3 + l: 1 + e: 1)
-
