@@ -39,8 +39,26 @@ const findFrequency = function(array) {
     }
   });
 
-  // Return the frequency map object
-  return frequencyMap;
+  // Find the most and least frequent elements
+  let mostFrequent = null;
+  let leastFrequent = null;
+
+  Object.keys(frequencyMap).forEach(key => {
+    if (!mostFrequent || frequencyMap[key] > frequencyMap[mostFrequent]) {
+      mostFrequent = key;
+    }
+
+    if (!leastFrequent || frequencyMap[key] < frequencyMap[leastFrequent]) {
+      leastFrequent = key;
+    }
+  });
+
+  // Return an object with the frequency map, most and least frequent elements
+  return {
+    frequencies: frequencyMap,
+    mostFrequent: mostFrequent,
+    leastFrequent: leastFrequent
+  };
 };
 
 const isPalindrome = function(str) {
