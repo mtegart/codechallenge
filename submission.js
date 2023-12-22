@@ -15,6 +15,18 @@ const findSum = function(array) {
   return sum;
 };
 
+
+
+    // Check if the element is already in the frequency map
+    if (frequencyMap.hasOwnProperty(key)) {
+      // If yes, increment the count
+      frequencyMap[key]++;
+    } else {
+      // If not, initialize the count to 1
+      frequencyMap[key] = 1;
+    }
+  });
+
 const findFrequency = function(array) {
   // Check if the input is an array
   if (!Array.isArray(array)) {
@@ -53,11 +65,10 @@ const findFrequency = function(array) {
     }
   });
 
-  // Return an object with the frequency map, most and least frequent elements
+  // Return an object with the most and least frequent elements
   return {
-    frequencies: frequencyMap,
-    mostFrequent: mostFrequent,
-    leastFrequent: leastFrequent
+    most: mostFrequent,
+    least: leastFrequent
   };
 };
 
