@@ -125,7 +125,7 @@ const scoreScrabble = function(str) {
   if (typeof str !== 'string') {
     return 'Input should be a string';
   }
-
+  
   // Define point values for each letter in Scrabble
   const letterValues = {
     a: 1, b: 3, c: 3, d: 2, e: 1, f: 4, g: 2, h: 4,
