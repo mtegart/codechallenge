@@ -80,23 +80,21 @@ const largestPair = function(array) {
     return 'Input should be an array with at least two elements';
   }
 
-  // Initialize variables to store the largest pair and its sum
-  let largestSum = array[0] + array[1];
-  let largestPair = [array[0], array[1]];
+  // Initialize variables to store the largest pair and their product
+  let largestProduct = array[0] * array[1];
 
-  // Iterate through the array to find the largest pair
+  // Iterate through the array to find the largest pair and their product
   for (let i = 1; i < array.length - 1; i++) {
-    const currentSum = array[i] + array[i + 1];
-    
-    // Update largest pair and sum if a larger pair is found
-    if (currentSum > largestSum) {
-      largestSum = currentSum;
-      largestPair = [array[i], array[i + 1]];
+    const currentProduct = array[i] * array[i + 1];
+
+    // Update largest product if a larger pair is found
+    if (currentProduct > largestProduct) {
+      largestProduct = currentProduct;
     }
   }
 
-  // Return the sum of the largest pair
-  return largestSum;
+  // Return the product of the largest pair
+  return largestProduct;
 };
 
 const removeParenth = function(str) {
