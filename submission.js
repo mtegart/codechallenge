@@ -26,13 +26,16 @@ const findFrequency = function(array) {
 
   // Iterate through the array to count frequencies
   array.forEach(element => {
+    // Convert the element to a string to handle both words and numbers
+    const key = String(element);
+
     // Check if the element is already in the frequency map
-    if (frequencyMap.hasOwnProperty(element)) {
+    if (frequencyMap.hasOwnProperty(key)) {
       // If yes, increment the count
-      frequencyMap[element]++;
+      frequencyMap[key]++;
     } else {
       // If not, initialize the count to 1
-      frequencyMap[element] = 1;
+      frequencyMap[key] = 1;
     }
   });
 
@@ -84,8 +87,8 @@ const removeParenth = function(str) {
     return 'Input should be a string';
   }
 
-  // Use regular expression to remove parentheses
-  const result = str.replace(/[()]/g, '');
+  // Use a regular expression to remove parentheses and content within them
+  const result = str.replace(/(\([^)]*\)|\{[^}]*\})/g, '');
 
   return result;
 };
